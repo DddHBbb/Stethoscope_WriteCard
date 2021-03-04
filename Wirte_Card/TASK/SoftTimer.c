@@ -47,8 +47,9 @@ void LOWPWR_Config(void)
     HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
     Stm32_Clock_Init(384, 25, 2, 8);
     OLED_Clear();
-    Show_String(0, 0, (uint8_t *)"播放状态：");
-    Show_String(32, 32, (uint8_t *)"停止播放");
+    Show_String(0, 0, (uint8_t *)"听诊器写卡工装");
+		Show_String(0, 16, (uint8_t *)"写入范围 1~43");
+		Show_String(0, 32, (uint8_t *)"当前输入:");
 		BattChek();
     OLED_Refresh_Gram();
     rt_kprintf("退出低功耗\n");

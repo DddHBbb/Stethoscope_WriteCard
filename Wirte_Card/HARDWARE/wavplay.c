@@ -345,13 +345,13 @@ void Adjust_Volume(void)
         if (key == KEY_UP)
         {
             volume ++;
-            if (volume > 42)
-                volume = 42;
+            if (volume > 43)
+                volume = 43;
         }
         else if (key == KEY_DOWN)
         {
-            if (volume == 0)
-                volume = 0;
+            if (volume == 1)
+                volume = 1;
             else
                 volume --;
         }

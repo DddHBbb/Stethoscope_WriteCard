@@ -1085,8 +1085,8 @@
     <Layers>
       <Layer>
         <LayName>Stethoscope</LayName>
-        <LayTarg>0</LayTarg>
         <LayPrjMark>1</LayPrjMark>
+        <LayTitle>Write_Card</LayTitle>
       </Layer>
     </Layers>
   </LayerInfo>

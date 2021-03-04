@@ -14,7 +14,7 @@ int main(void)
     ENABLE_ALL_SWITCH();
     PowerOn_Display();
     ALL_Init();
-//    Timer_Init();
+    Timer_Init();
     Event_init();
     Mailbox_init();
     Semaphore_init();
