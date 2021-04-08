@@ -83,7 +83,7 @@
           <AfterMake>
             <RunUserProg1>1</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name>D:\Deuce\MDK5\ARM\ARMCC\bin\fromelf.exe --bin -o D:\FakeC\Tingzhen_Version\Tingzhen_Program\Stethoscope.bin D:\FakeC\Tingzhen_Version\Tingzhen_Program\Objects\Stethoscope.axf</UserProg1Name>
+            <UserProg1Name>D:\Deuce\MDK5\ARM\ARMCC\bin\fromelf.exe --bin -o   D:\FakeC\Stethoscope_WriteCard\Wirte_Card\Stethoscope.bin D:\FakeC\Stethoscope_WriteCard\Wirte_Card\Objects\Write_Card.axf</UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
@@ -276,7 +276,7 @@
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
-                <StartAddress>0x8000000</StartAddress>
+                <StartAddress>0x8010000</StartAddress>
                 <Size>0xf0000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>

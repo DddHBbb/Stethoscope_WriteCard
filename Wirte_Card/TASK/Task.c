@@ -96,10 +96,23 @@ void USB_Transfer_Task(void *parameter)
     printf("USB_Transfer_Task\n");
     while (1)
     {
-        if (HAL_GPIO_ReadPin(GPIOC, USB_Connect_Check_PIN) == GPIO_PIN_RESET)
+			if (HAL_GPIO_ReadPin(GPIOC, USB_Connect_Check_PIN) == GPIO_PIN_RESET)
         {
-					ChargeDisplay();  
-        }
+					SD_Init();
+					MSC_BOT_Data = (uint8_t *)rt_malloc(MSC_MEDIA_PACKET); //…Í«Îƒ⁄¥Ê
+					USBD_Init(&USB_OTG_dev, USB_OTG_FS_CORE_ID, &USR_desc, &USBD_MSC_cb, &USR_cb);
+					while(1)
+					{
+						ChargeDisplay();
+						rt_thread_delay(1000); //1000ms
+						if (HAL_GPIO_ReadPin(GPIOC, USB_Connect_Check_PIN)  != GPIO_PIN_RESET)
+						{
+							usbd_CloseMassStorage(&USB_OTG_dev);
+							rt_free(MSC_BOT_Data);	
+							break;
+						}
+					}				
+				}				
 				rt_thread_delay(1000); //1000ms
     }     
 }
